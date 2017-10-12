@@ -1,0 +1,515 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE START
+        #HTML5
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+            #LISTS
+            #BLOCKQUOTES
+            #HELPERS
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #MEDIAQUERIES
+        #GRID
+            #CLEARFIX
+    #BASE SITE
+        #STRUCTURE
+            #HEADER
+            #LOGO
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #NAVIGATION
+            #TOGGLE-NAV (Default)
+--------------------------------- */
+/* #BASE START */
+/* #HTML5 */
+header, footer, aside, nav, section, figure, main, article{
+    display: block;
+}
+
+
+
+/* --------------------------------- */
+/* #BASE CONTENT */
+
+
+/* #MEDIA */
+/* #IMAGES */
+img.scale-with-grid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* #COMPONENTS */
+/* #BUTTONS */
+button {
+    font-size: inherit;
+}
+
+button, a.button {
+    display: inline-block;
+    background-color: firebrick;
+    border: 1px solid firebrick;
+    color: #fff;
+    text-decoration: none;
+    padding: .75em 1em;
+    -webkit-border-radius: .32em;
+    -moz-border-radius: .32em;
+    border-radius: .32em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border: none;
+    cursor: pointer;
+    line-height: 1em;
+}
+
+button.alt, a.button.alt {
+    background-color: rgba(255, 255, 255, 0) ;
+    border: 1px solid firebrick;
+    color: firebrick;
+    text-decoration: none;
+}
+
+button:hover, a.button:hover {
+    background-color: darkred;
+    color: #fff;
+    border-color: darkred;
+    text-decoration: none;
+}
+
+
+
+/* --------------------------------- */
+/* #BASE LAYOUT */
+/* #MEDIA QUERIES */
+
+/* SMALL MOBILE */
+body.demo: {
+    padding-top: 2em;
+}
+
+body.demo:before {
+    content: 'Small (Less than 768px)';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+    color: #fff;
+}
+
+body {
+    font-family: Avenir Condensed, Helvetica, Arial, sans-serif;
+    color: #333;
+    font-size: 87.5%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 92%;
+    padding: 0 4%;
+    margin: 0 auto;
+}
+
+
+/* MEDIUM TABLET */
+@media (min-width: 768px) {
+    body {
+        background: white;
+        font-size: 100%;
+    }
+    
+    body.demo:before {
+        content: 'Medium (768-1050px)';
+        background-color: aquamarine;
+        font: white;
+    }
+}
+
+
+/* LARGE-LAPTOP */
+@media (min-width: 1050px) {
+    body {
+        background: white;
+        font-size: 100%;
+    }
+    
+    body.demo:before {
+    content: 'Large (1050-1249px)';
+    background-color: darkturquoise;
+    }
+    
+    .container {
+    width: 900px;
+    padding: 0 50px;
+    }
+}
+
+
+/* EXTRA LARGE-DESKTOP+ */
+@media (min-width: 1250px) {
+    body {
+        background: white;
+        font-size: 112.5%;
+    }
+    
+    body.demo:before {
+    content: 'Extra Large (1250px+)';
+    background-color: cornflowerblue;
+    }
+    
+    .container {
+    width: 1100px;
+    }
+}
+
+
+/* #GRID */
+.row {
+}
+
+.column {
+    margin-bottom: 3em; 
+}
+
+@media (min-width: 768px) {
+    .column {
+        float: left;
+        margin-right: 8%;
+    }
+    
+    .column:last-child {
+        margin-right: 0;
+    }
+    
+    /* WIDTH = 100 - GUTTERS / # of COLUMNS */
+    
+    .one-whole.column {width: 100%; }
+    .one-half.column { width: 46%; }
+    .one-third.column { width: 28%; }
+    .two-thirds.column { width: 64%; }
+    .one-fourth.column { width: 19%; }
+
+    .column.centered {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;}    
+}
+
+
+/* #CLEARFIXES */
+.group:after,
+.container:after,
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* FOR DEMO PURPOSES ONLY */
+.demo .column {
+    background: rgba(0,0,0,.1);
+}
+
+.demo .column p {
+    margin: 0;
+    padding: 1em 0;
+    text-align: center;
+}
+
+
+
+/* --------------------------------- */
+/* #BASE SITE */
+/* #SITE STRUCTURE */
+
+/* #HEADER & FOOTER */
+.site-header a,
+.site-main a,
+.site-footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.site-header a:hover,
+.site-main a:hover,
+.site-footer a:hover {
+    color: firebrick;
+    text-decoration: none;
+}
+
+
+
+/* #HEADER */
+.site-header {
+    padding-top: .25em;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+}
+
+.site-header .container:after {
+    content: '';
+    display: block;
+}
+
+
+
+/* #SITE BRANDING */
+.site-branding h1 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.site-branding h1 a{
+    display: inline-block;
+    padding: 1em 0;
+}
+
+@media (min-width:768px) {
+    .site-header .site-branding {
+        float: left;
+    }
+}
+
+
+    
+/* #FOOTER ONLY */
+.site-footer .container:before {
+    content: '';
+    display: block;
+    border-top: 1px solid #ddd;
+}
+
+.site-footer .site-navigation ul {
+    border-top: none;
+}
+
+
+
+/* #NAVIGATION */
+.site-navigation ul {
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.site-navigation ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+}
+
+.site-navigation ul li a{
+    display: block;
+    padding: 1em;
+}
+
+@media (min-width:768px) {
+    .site-header .site-navigation {
+        float: right;
+    }
+    .site-header .site-navigation ul {
+        border-top: none;
+        margin-top: .95em;
+    }
+}
+    
+
+
+/* MAIN CONTENT AREA */
+/* SECTION */
+section {
+    margin: 0;
+}
+    
+.hero {
+    background-color: #ccc;
+    background-image: url('../../images/placeholder_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10em 1em 4em 1em;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1,
+.hero h2 {
+    max-width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    max-width: 22em;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+.cream {
+    background-color: floralwhite;
+    padding-top: 1.5em;
+    }
+
+
+/* #SUBPAGES */
+@media (min-width:768px) {
+    .subpage-main {
+        width: 70%;
+        padding-left: 4%;
+        margin-top: 2em;
+        border-left: 1px solid #ddd;
+        float: right;
+    }
+
+    .subpage-main section: first-child {
+        padding-top: 0;
+    }
+    
+    .sidebar {
+        width: 21%;
+        padding-top: .4em;
+        padding-right: 4%;
+        margin-top: 2em;
+        float: left;
+    }
+}
+
+.sidebar .subheader {
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: normal;
+    padding-top: .1em;
+}
+
+.sidebar nav ul {
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    list-style: none;
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+
+.sidebar nav ul li:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar nav ul ul li:last-child {
+    border-bottom: none;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+.sidebar nav ul ul li a {
+    padding-left: 2em;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #f8f8f8;
+}
+
+
+
+
+
+/* NAVIGATION */
+/* #NAVICON MENU */
+.menu.navicon {
+    color: rgba(0,0,0,0);
+}
+
+.menu.navicon::selection {
+    background: rgba(0,0,0,0);
+}
+
+.menu.navicon:after {
+    color: #333;
+    content: '\2630';
+    font-size: 1.5em;
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    display: block;
+    float: right;
+    margin-top: 1.1em;
+    transition: all .3s ease;
+}
+
+.menu.navicon.expanded:after {
+    content: '\2715';
+    transform: rotate(90deg);
+}
+
+
+/* #TOGGLE-NAV */
+.toggle-nav .site-branding {
+    float: left;
+}
+
+.toggle-nav .menu {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .toggle-nav .menu {
+        display: block;
+        float: right;
+        margin-top: .9m;
+    }
+    
+    .toggle-nav .menu + ul {
+        display: none;
+    }
+    
+    .toggle-nav .menu.expanded + ul {
+        clear: both;
+        display: block;
+        float: none;
+        margin-bottom: .5em;
+    }
+    
+    .toggle-nav .menu + ul li {
+        clear: both;
+        margin: 0;
+        padding: .5em 0 0 0;
+        display: block;
+        float: none;
+    }
+    
+    .toggle-nav .menu + ul li a {
+        padding: .75em;
+        transition: all .3s ease;
+        color: #333;
+    }
+    
+    .toggle-nav .menu + ul li a:hover {
+        color: #fff;
+        background: firebrick;
+    }
+}
+
+
